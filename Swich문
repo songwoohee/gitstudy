@@ -1,0 +1,100 @@
+// if else (여러 조건 또는 범위에 해당 할 때)
+// swich (명확한 케이스가 있는 경우) 
+
+package
+
+public class _04_SwitchCase {
+  public static void main(String[] args) {
+
+//if else문 이용 
+    int ranking = 2;
+    if (ranking == 1) {
+        System.out.println("전액 장학금");
+  }  else if (ranking == 2 && ranking == 3) {
+        System.out.println("반액 장학금");
+  }  else {
+        System.out.println("장학금 대상 아님");
+  } System.out.println("조회 완료 #1);
+
+// 출력 
+// 반액 장학금
+// 조회 완료 #1
+
+//switch case문 이용 
+// switch ( expression ) {
+     case A : .. 수행할 명령 ..
+          break;
+      case B : .. 수행할 명령 ..
+          break;
+      case C : .. 수행할 명령 ..
+          break;
+      default : .. 수행할 명령 .. 
+
+ranking = 2;
+switch (ranking) {
+    case 1 : 
+        System.out.println("전액 장학금");
+        break;
+    case 2 : 
+        System.out.println("반액 장학금");
+        break;
+    case 3 : 
+        System.out.println("반액 장학금");
+        break;
+    default :
+        System.out.println("장학금 대상 아님");
+}
+System.out.println("조회 완료 #2");
+
+//출력
+// 반액 장학금
+// 조회 완료 #2
+
+// case2 와 case 3을 통합 (2개가 같은 조건일 때)
+
+  ranking = 2;
+  switch (ranking) {
+    case 1 : 
+        System.out.println("전액 장학금");
+        break;
+    case 2 :
+    case 3 :
+        System.out.println("반액 장학금");
+        break;
+    default :
+        System.out.println("장학금 대상 아님");
+}
+System.out.println("조회 완료 #3");
+
+// 출력
+// 반액 장학금
+// 조회 완료 #3
+// case2문에서 break가 빠졌기 때문에 그 다음 case 3문으로 넘어감, case 3의 출력문이 출력되고 break에 멈춤 
+// 갯수 상관없이 더 추가 할 수 있다. (갯수 상관없음 ) 
+
+// 중고 상품의 등급에 따른 가격을 책정 (1급 : 최상, 4급 : 최하)
+int grade = 3;
+int price = 7000;
+switch (grade) {
+    case 1 : 
+        price += 1000; 
+    case 2 : 
+        price += 1000; 
+    case 3 : 
+        price += 1000; 
+        break;
+}
+System.out.println(grade + "등급 제품의 가격 : " + price + " 원"
+
+//출력
+// grade = 3인 경우, 3등급 제품의 가격 : 8000 원
+// grade = 2인 경우, 2등급 제품의 가격 : 9000 원
+// grade = 1인 경우, 1등급 제품의 가격 : 10000 원
+// 이유 :  price = price + 1000, 1,2 에서는 본인들이 수행하고 브레이크가 바로 없기 때문에 밑으로 내려가서 (+1000)을 계속 더한다.
+// 1등급이 10,000원인 이유 ( case 2 (1000) + case3 (1000) 까지 더해져서 총 10000원 )
+
+
+
+
+
+
