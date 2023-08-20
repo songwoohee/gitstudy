@@ -1,0 +1,54 @@
+//조건문 if else
+
+package
+
+public class _02_else {
+  public satatic void main(String[] args) {
+      int hour = 13;
+      if (hour < 14) {
+          System.out.println("아이스 아메리카노 +1");
+} else { // if가 아닌 경우 , 그 외
+          System.out.println("아이스 아메리카노(디카페인) + 1");
+} 
+System.out.println("커피 주문 완료 #1") 
+
+// 출력 true인 경우
+//아이스 아메리카노 +1
+//커피 주문 완료 #1
+// hour가 14 초과 한경우
+//아이스 아메리카토(디카페인) +1
+//커피 주문 완료 #1
+
+// 오후 2시 이후 이거나 모닝 커피를 마신 경우 
+hour = 10;
+boolean morningCoffee = false;
+if (hour >= 14 || morningCoffee == false) {
+    System.out.println("아이스 아메리카노(디카페인) +1");
+   } else { 
+    System.out.println("아이스 아메리카노 +1");
+   }
+System.out.println("커피 주문 완료#2"); 
+  }
+}
+
+// 조건이 하나라도 맞는 경우 
+// 아이스 아메리카노(디카페인) +1
+// 커피 주문 완료 #2
+// 조건이 모두 안맞는 경우 
+// 아이스 아메리카노 +1
+// 커피 주문 완료 #2
+
+
+
+
+
+
+
+
+
+
+
+
+
+                             
+                  
