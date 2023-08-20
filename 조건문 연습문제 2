@@ -1,0 +1,38 @@
+package 연습문제;
+
+import java.util.Scanner;
+
+// 세자리 정수를 입력 받아 가장 큰 수 출력
+// Math.max 더 큰 수를 출력 해주는 함수?
+public class Test2 {
+    public static void main(String[] args) {
+        Scanner sc = new.Scanner(System.in);
+        System.out.println("숫자를 입력 하세요 : ");
+        int num = sc.nextInt();
+        int a = num / 100;
+        int b = (num % 100) / 10;
+        int c = num % 10;
+// 여기까지 각 세자리를 따로 출력. 
+// 그 중 가장 큰 수를 출력해야 함
+// 첫 번째 방법  (Math.max 로 큰 수 찾기) 
+        if (a > b) {
+            System.out.println(Math.max(a,c));
+        } else {
+            System.out.println(Math.max(b,c)); 
+        }
+// 두 번째 방법 
+       if (a > b) {
+            if (a > c) {
+                System.out.println(a);
+          } else {
+                System.out.println(c);
+          }
+      }    else {
+              if (b > c) {
+                System.out.println(b);
+         } else {   
+                System.out.println(b);
+            }
+          }
+
+
