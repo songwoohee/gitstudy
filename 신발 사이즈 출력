@@ -1,0 +1,24 @@
+package chap_05;
+/*
+[문제]
+배열을 활용 하여 쇼핑몰에서 구매 가능한 신발 사이즈 옵션을 출력 하는 프로그램을 작성
+[조건]
+신발 사이즈는 250 부터 295까지 5단위로 증가
+신발 사이즈 수는 총 10가지
+[출력]
+사이즈 250 (재고 있음)
+사이즈 255 (재고 있음)
+*/
+public class _05_Quiz_ShoesSize {
+    public static void main(String[] args) {
+        int[] size = new int[10];
+        for (int i = 0; i < size.length; i++) {
+            // 사이즈가 5단위씩 증가
+            size[i] = 250 + (5 * i);   // 5x1 = 5, 5x2 = 10.. 5단위씩 증가
+        }
+        for (int size1 :   // for-each문 활용 (size1 이라는 변수에 size에 담겨져 있는 값을 담아줘)
+                size) {
+            System.out.println("사이즈 " + size1 + " (재고 있음)");
+        }
+    }
+}
